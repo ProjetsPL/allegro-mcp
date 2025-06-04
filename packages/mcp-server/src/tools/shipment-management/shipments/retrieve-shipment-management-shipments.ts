@@ -1,0 +1,35 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import { Tool } from '@modelcontextprotocol/sdk/types.js';
+import type { Metadata } from '../../';
+import AllegroAPI from 'allegro-api';
+
+export const metadata: Metadata = {
+  resource: 'shipment_management.shipments',
+  operation: 'read',
+  tags: [],
+  httpMethod: 'get',
+  httpPath: '/shipment-management/shipments/{shipmentId}',
+  operationId: 'getShipmentDetails',
+};
+
+export const tool: Tool = {
+  name: 'retrieve_shipment_management_shipments',
+  description:
+    'Use this resource to get parcel details. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-szczegolowe-informacje-o-paczce" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-shipment-details" target="_blank">EN</a>.',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      shipmentId: {
+        type: 'string',
+      },
+    },
+  },
+};
+
+export const handler = (client: AllegroAPI, args: Record<string, unknown> | undefined) => {
+  const { shipmentId, ...body } = args as any;
+  return client.shipmentManagement.shipments.retrieve(shipmentId);
+};
+
+export default { metadata, tool, handler };
