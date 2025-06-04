@@ -42,15 +42,15 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/allegro-api-typescript.git
+$ npm install git+ssh://git@github.com:ProjetsPL/allegro-mcp.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/allegro-api-typescript
-$ cd allegro-api-typescript
+$ git clone https://www.github.com/ProjetsPL/allegro-mcp
+$ cd allegro-mcp
 
 # With yarn
 $ yarn link
