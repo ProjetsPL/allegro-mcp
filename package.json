@@ -1,12 +1,12 @@
 {
   "name": "allegro-api",
-  "version": "0.0.1-alpha.0",
+  "version": "1.0.0",
   "description": "The official TypeScript library for the Allegro API API",
   "author": "Allegro API <>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",
-  "repository": "github:stainless-sdks/allegro-api-typescript",
+  "repository": "github:ProjetsPL/allegro-mcp",
   "license": "Apache-2.0",
   "packageManager": "yarn@1.22.22",
   "files": [
