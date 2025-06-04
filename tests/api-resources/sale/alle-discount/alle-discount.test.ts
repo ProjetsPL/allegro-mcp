@@ -1,0 +1,81 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import AllegroAPI from 'allegro-api';
+
+const client = new AllegroAPI({
+  apiKey: 'My API Key',
+  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+});
+
+describe('resource alleDiscount', () => {
+  // skipped: tests are disabled for the time being
+  test.skip('listCampaigns', async () => {
+    const responsePromise = client.sale.alleDiscount.listCampaigns();
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('listCampaigns: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.sale.alleDiscount.listCampaigns(
+        { campaignId: 'campaignId' },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(AllegroAPI.NotFoundError);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('listEligibleOffers', async () => {
+    const responsePromise = client.sale.alleDiscount.listEligibleOffers('campaignId');
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('listEligibleOffers: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.sale.alleDiscount.listEligibleOffers(
+        'campaignId',
+        { limit: 0, meetsConditions: true, offerId: 'offerId', offset: 0 },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(AllegroAPI.NotFoundError);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('listSubmittedOffers', async () => {
+    const responsePromise = client.sale.alleDiscount.listSubmittedOffers('campaignId');
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // skipped: tests are disabled for the time being
+  test.skip('listSubmittedOffers: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.sale.alleDiscount.listSubmittedOffers(
+        'campaignId',
+        { limit: 0, offerId: 'offerId', offset: 0, participationId: 'participationId' },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(AllegroAPI.NotFoundError);
+  });
+});
