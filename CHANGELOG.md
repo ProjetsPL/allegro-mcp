@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.0 (2025-06-07)
+
+Full Changelog: [v1.0.0...v1.1.0](https://github.com/ProjetsPL/allegro-mcp/compare/v1.0.0...v1.1.0)
+
+### Features
+
+* **mcp:** implement support for binary responses ([9a91d8a](https://github.com/ProjetsPL/allegro-mcp/commit/9a91d8a169991dcb8a5c334e585b47e0b602768b))
+
+
+### Chores
+
+* avoid type error in certain environments ([b8b3249](https://github.com/ProjetsPL/allegro-mcp/commit/b8b3249bb8a63031351b66406000c1dc56260a77))
+
 ## 1.0.0 (2025-06-04)
 
 Full Changelog: [v0.0.1-alpha.0...v1.0.0](https://github.com/ProjetsPL/allegro-mcp/compare/v0.0.1-alpha.0...v1.0.0)
