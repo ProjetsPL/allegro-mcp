@@ -1,5 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+import { asTextContentResult } from 'allegro-api-mcp/tools/types';
+
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../../';
 import AllegroAPI from 'allegro-api';
@@ -27,9 +29,10 @@ export const tool: Tool = {
   },
 };
 
-export const handler = (client: AllegroAPI, args: Record<string, unknown> | undefined) => {
+export const handler = async (client: AllegroAPI, args: Record<string, unknown> | undefined) => {
   const { messageId, ...body } = args as any;
-  return client.messaging.messages.delete(messageId);
+  await client.messaging.messages.delete(messageId);
+  return asTextContentResult('Successful tool call');
 };
 
 export default { metadata, tool, handler };

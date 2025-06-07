@@ -1,5 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+import { asTextContentResult } from 'allegro-api-mcp/tools/types';
+
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../../../';
 import AllegroAPI from 'allegro-api';
@@ -34,9 +36,10 @@ export const tool: Tool = {
   },
 };
 
-export const handler = (client: AllegroAPI, args: Record<string, unknown> | undefined) => {
+export const handler = async (client: AllegroAPI, args: Record<string, unknown> | undefined) => {
   const { invoiceId, ...body } = args as any;
-  return client.order.checkoutForms.invoices.uploadFile(invoiceId, body);
+  await client.order.checkoutForms.invoices.uploadFile(invoiceId, body);
+  return asTextContentResult('Successful tool call');
 };
 
 export default { metadata, tool, handler };

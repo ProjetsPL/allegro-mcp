@@ -1,7 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import AllegroAPI from 'allegro-api';
-import { Tool } from '@modelcontextprotocol/sdk/types.js';
+import { Metadata, Endpoint, HandlerFunction } from './types';
+
+export { Metadata, Endpoint, HandlerFunction };
 
 import get_allegro_prices_account_eligibility_sale from './sale/get-allegro-prices-account-eligibility-sale';
 import get_badge_campaigns_sale from './sale/get-badge-campaigns-sale';
@@ -258,24 +259,6 @@ import add_fulfillment_tax_id from './fulfillment/tax-id/add-fulfillment-tax-id'
 import get_fulfillment_tax_id from './fulfillment/tax-id/get-fulfillment-tax-id';
 import create_removal_fulfillment_preferences from './fulfillment/removal/preferences/create-removal-fulfillment-preferences';
 import get_removal_fulfillment_preferences from './fulfillment/removal/preferences/get-removal-fulfillment-preferences';
-
-export type HandlerFunction = (client: AllegroAPI, args: Record<string, unknown> | undefined) => Promise<any>;
-
-export type Metadata = {
-  resource: string;
-  operation: 'read' | 'write';
-  tags: string[];
-
-  httpMethod?: string;
-  httpPath?: string;
-  operationId?: string;
-};
-
-export type Endpoint = {
-  metadata: Metadata;
-  tool: Tool;
-  handler: HandlerFunction;
-};
 
 export const endpoints: Endpoint[] = [];
 
